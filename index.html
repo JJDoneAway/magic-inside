@@ -71,6 +71,11 @@
         background-color: #777 !important
     }
 
+    /* no blog card should be displayed at first */
+    .blog-slide {
+        display: none
+    }
+
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
 
@@ -158,18 +163,33 @@
     </div>
 
     <!-- Container (Blogs Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="blogs">
+    <div class="w3-content w3-container w3-padding-64" id="blogs" style="min-height: 60em;">
         <h3 class="w3-center">MY BLOGS</h3>
         <p class="w3-center"><em>Find here some of my blogs I have written out of enthusiasm. Most of them are about my
                 hobby AI but not enterprise architecture.
                 <br>
                 As I have written them for fun and with fast fingers, they are in German.</em></p><br>
 
-        <a href="https://www.mt-ag.com/blog/know-how/replatforming/blog-know-how-in-jedem-enterprise-architekten-steckt-auch-ein-schwein/"
+        <div class="w3-center">
+            <div class="w3-section">
+                <button class="w3-button" onclick="plusDivs(-1)"><i class="fa fa-step-backward"></i>&nbsp;Prev</button>
+                <button class="w3-button my-page" onclick="currentDiv(0)">1</button>
+                <button class="w3-button my-page" onclick="currentDiv(1)">2</button>
+                <button class="w3-button my-page" onclick="currentDiv(2)">3</button>
+                <button class="w3-button my-page" onclick="currentDiv(3)">4</button>
+                <button class="w3-button my-page" onclick="currentDiv(4)">5</button>
+                <button class="w3-button my-page" onclick="currentDiv(5)">6</button>
+                <button class="w3-button my-page" onclick="currentDiv(6)">7</button>
+                <button class="w3-button" onclick="plusDivs(1)">Next&nbsp;<i class="fa fa-step-forward"></i></button>
+            </div>
+        </div>
+
+        <a class="blog-slide"
+            href="https://www.mt-ag.com/blog/know-how/replatforming/blog-know-how-in-jedem-enterprise-architekten-steckt-auch-ein-schwein/"
             target="_blank" style="text-decoration:none;">
-            <div class="w3-card-4 ">
+            <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
-                    <h5>In jedem Enterprise Architekten steckt auch ein Schwein</h5>
+                    <h5>1. In jedem Enterprise Architekten steckt auch ein Schwein</h5>
                 </header>
                 <div class="w3-container">
                     <p>
@@ -185,11 +205,12 @@
             </div>
         </a>
 
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/killer-bots-ki-monkeys-fur-widerstandsfahige-systeme/"
+        <a class="blog-slide"
+            href="https://www.mt-ag.com/blog/ki-werkstatt/killer-bots-ki-monkeys-fur-widerstandsfahige-systeme/"
             target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
-                    <h5>Killer-Bots – KI Monkeys für widerstandsfähige Systeme</h5>
+                    <h5>2. Killer-Bots – KI Monkeys für widerstandsfähige Systeme</h5>
                 </header>
                 <div class="w3-container">
                     <p>Der Betrieb muss aufrecht erhalten bleiben, auch wenn Teile nicht mehr richtig funktionieren.
@@ -203,12 +224,30 @@
             </div>
         </a>
 
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/gan-wie-erfinden-computer-neue-menschen/" target="_blank"
-            style="text-decoration:none;">
+        <a class="blog-slide" href="https://vimeo.com/379960163" target="_blank" style="text-decoration:none;">
+            <div class="w3-card-4" style="margin-top: 2em;">
+                <header class="w3-container w3-blog">
+                    <h5>3. data2day 2019: Deep Learning mit Keras</h5>
+                </header>
+                <div class="w3-container">
+                    <p>Ein Talk, den ich auf der Data2Day 2019 gehalten habe:<br>Keras ist ein Python Framework, mit dem
+                        man neuronale Netze zusammenstecken kann. Dafür bietet Keras eine aufgeräumte und fokussierte
+                        API. Die eigentlichen Berechnungen für das neuronale Netz finden dann im unter Keras liegenden
+                        TensorFlow statt. Die Kombination aus Keras und TensorFlow ist so erfolgreich, dass beide
+                        Projekte seit dem Release 1.4 von TensorFlow verschmolzen wurden. Somit ist es Zeit, sich Keras
+                        einmal genauer anzuschauen. Höhne zeigt in seinem Talk den Einstiegspunkt in Keras und
+                        implementiert dazu ein Convolutional Neuronal Network (CNN), das handgeschriebene Ziffern
+                        erkennt. […]</p>
+                </div>
+            </div>
+        </a>
+
+        <a class="blog-slide" href="https://www.mt-ag.com/blog/ki-werkstatt/gan-wie-erfinden-computer-neue-menschen/"
+            target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        GAN – Teil 1 – Wie erfinden Computer neue Menschen?
+                        4. GAN – Teil 1 – Wie erfinden Computer neue Menschen?
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -224,12 +263,13 @@
             </div>
         </a>
 
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/gan-teil-2-keras-kann-auch-ziffern-schreiben/" target="_blank"
+        <a class="blog-slide"
+            href="https://www.mt-ag.com/blog/ki-werkstatt/gan-teil-2-keras-kann-auch-ziffern-schreiben/" target="_blank"
             style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        GAN – Teil 2 – Keras kann auch Ziffern schreiben
+                        5. GAN – Teil 2 – Keras kann auch Ziffern schreiben
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -243,12 +283,13 @@
                 </div>
             </div>
         </a>
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/normalverteilung-%f0%9d%9d%81-und-%f0%9d%9d%88-bestimmen/"
+        <a class="blog-slide"
+            href="https://www.mt-ag.com/blog/ki-werkstatt/normalverteilung-%f0%9d%9d%81-und-%f0%9d%9d%88-bestimmen/"
             target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Normalverteilung: 𝝁 und 𝝈 bestimmen
+                        6. Normalverteilung: 𝝁 und 𝝈 bestimmen
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -261,12 +302,12 @@
                 </div>
             </div>
         </a>
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/wie-die-ki-spielen-lernte/" target="_blank"
+        <a class="blog-slide" href="https://www.mt-ag.com/blog/ki-werkstatt/wie-die-ki-spielen-lernte/" target="_blank"
             style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Wie die KI spielen lernte
+                        7. Wie die KI spielen lernte
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -281,12 +322,12 @@
                 </div>
             </div>
         </a>
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/so-entwirft-man-ein-top-cnn/" target="_blank"
-            style="text-decoration:none;">
+        <a class="blog-slide" href="https://www.mt-ag.com/blog/ki-werkstatt/so-entwirft-man-ein-top-cnn/"
+            target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        So entwirft man ein Top CNN
+                        8. So entwirft man ein Top CNN
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -301,12 +342,12 @@
             </div>
         </a>
 
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/augmentieren-bei-neuronale-netze-mit-keras/" target="_blank"
-            style="text-decoration:none;">
+        <a class="blog-slide" href="https://www.mt-ag.com/blog/ki-werkstatt/augmentieren-bei-neuronale-netze-mit-keras/"
+            target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Augmentieren bei neuronale Netzen mit Keras
+                        9. Augmentieren bei neuronale Netzen mit Keras
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -317,12 +358,12 @@
                 </div>
             </div>
         </a>
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/trennschaerfe-bei-der-klassifizierung/" target="_blank"
-            style="text-decoration:none;">
+        <a class="blog-slide" href="https://www.mt-ag.com/blog/ki-werkstatt/trennschaerfe-bei-der-klassifizierung/"
+            target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Trennschärfe bei der Klassifizierung
+                        10. Trennschärfe bei der Klassifizierung
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -335,12 +376,13 @@
                 </div>
             </div>
         </a>
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/einstieg-in-convolutional-neuronale-netze-mit-keras/"
+        <a class="blog-slide"
+            href="https://www.mt-ag.com/blog/ki-werkstatt/einstieg-in-convolutional-neuronale-netze-mit-keras/"
             target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Einstieg in Convolutional Neuronale Netze mit Keras
+                        11. Einstieg in Convolutional Neuronale Netze mit Keras
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -357,12 +399,12 @@
                 </div>
             </div>
         </a>
-        <a href="https://www.mt-ag.com/blog/ki-werkstatt/einstieg-in-neuronale-netze-mit-keras/" target="_blank"
-            style="text-decoration:none;">
+        <a class="blog-slide" href="https://www.mt-ag.com/blog/ki-werkstatt/einstieg-in-neuronale-netze-mit-keras/"
+            target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Einstieg in neuronale Netze mit Keras
+                        12. Einstieg in neuronale Netze mit Keras
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -375,11 +417,11 @@
                 </div>
             </div>
         </a>
-        <a href="http://www.hallenwizard.de/" target="_blank" style="text-decoration:none;">
+        <a class="blog-slide" href="http://www.hallenwizard.de/" target="_blank" style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Hallen Wizard für die Tragwerksplanung
+                        13. Hallen Wizard für die Tragwerksplanung
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -390,12 +432,12 @@
                 </div>
             </div>
         </a>
-        <a href="http://www.magic-inside.de/Diplomarbeit/Diplomarbeit-Web.pdf" target="_blank"
+        <a class="blog-slide" href="http://www.magic-inside.de/Diplomarbeit/Diplomarbeit-Web.pdf" target="_blank"
             style="text-decoration:none;">
             <div class="w3-card-4" style="margin-top: 2em;">
                 <header class="w3-container w3-blog">
                     <h5>
-                        Untersuchungen zur Stabilität von geometrisch nichtlinearen Berechnungen
+                        14. Untersuchungen zur Stabilität von geometrisch nichtlinearen Berechnungen
                     </h5>
                 </header>
                 <div class="w3-container">
@@ -416,9 +458,6 @@
                 </div>
             </div>
         </a>
-
-
-
     </div>
 
     <!-- Third Parallax Image with Blogs Text -->
@@ -493,8 +532,37 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
+
+        // blog pagination prt
+        var slideIndex = 0;
+        showDivs(slideIndex);
+
+        // jump to the newx two blog cards
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        // jump to the previous two cards
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("blog-slide");
+            var dots = document.getElementsByClassName("my-page");
+            if (n > x.length / 2 - 1) { slideIndex = 0 }
+            if (n < 0) { slideIndex = x.length / 2 - 1}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-blog", "");
+            }
+            x[slideIndex * 2].style.display = "block";
+            x[slideIndex * 2 + 1].style.display = "block";
+            dots[slideIndex].className += " w3-blog";
+        }
     </script>
-
 </body>
-
 </html>
