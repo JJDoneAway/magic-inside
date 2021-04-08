@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<title>magic-inside</title>
+<meta name="description" content="Post reimt sich auf kotzen">
+<meta name="author" content="Johannes Hoehne">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../content/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    h1,h2 {
+        text-indent: -0.5em;
+
+    }
+
+    p {
+        font-family: serif;
+        font-size: larger;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: black;
+        line-height: 1.8;
+    }
+
+    .w3-cognac {
+        background-color: #d4ccc4 !important
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('../content/images/post_reimt_sich_auf_lotzen.jpg');
+        min-height: 100%;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+        background-image: url("../content/images/contact.jpg");
+        min-height: 400px;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    .w3-blog {
+        color: #fff !important;
+        background-color: #777 !important
+    }
+
+    /* no blog card should be displayed at first */
+    .blog-slide {
+        display: none
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+    }
+</style>
+
+<body class="w3-cognac">
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" style="color: black;" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-cognac w3-hide w3-hide-large w3-hide-medium">
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h1 class="w3-center">Post reimt sich auf Kotzen nicht aber auf Kunde</h1>
+        <P>In diesem Blog möchte ich zeigen,
+            dass in jedem frustrierten Kunden eine große Chance steck…
+        </P>
+        <P>…oder im Falle der Deutschen Post
+            eben auch ein sich kaskadierendes Problem.</P>
+        <H1>Das Fallbeispiel</H1>
+        <H3>Frustlevel 1</H3>
+        <P>Meine Frau feiert am achten April
+            ihren Geburtstag. Dieses Jahr habe ich mich dazu entschieden, ihr
+            eine ganze Menge kleine Präsente zu schenken, die zusammen eine
+            Geschichte erzählen. Den Schlussstein zu dieser Geschichte habe ich
+            bei Amazon bestellt. Ohne diesen Schlussstein kommt die Komposition
+            nicht richtig zur Geltung.
+        </P>
+        <P>Mit der Bestellung habe ich leider
+            ein wenig lange gewartet. Dennoch hat mir Amazon eine Lieferung am
+            siebten April also einen Tag vor dem Geburtstag meiner Frau zugesagt.
+            Knapp aber OK.
+        </P>
+        <P>Als ich dann am siebten April etwa
+            um 12 Uhr zum Briefkasten ging, fand ich den bekannten gelben Zettel
+            der Post vor, der mir sagte, dass der Briefträger um 11:05 Uhr nicht
+            dazu in der Lage war, mir mein Päckchen zuzustellen. Seltsam, da ich
+            Corona bedingt permanent im Home-Office bin und definitiv zu Hause
+            war.
+        </P>
+        <P>Genau zu diesem Zeitpunkt stellte
+            sich bei mir die erste Stufe meines Kunden–Störgefühls ein:
+            „Warum hat der Postbote nicht auch noch bei einem Nachbarn
+            geklingelt? Wenn mir Amazon über seinen eigenen Lieferdienst eine
+            Sendung zustellt, macht dieser das immer. Hmm typisch Post!“
+        </P>
+        <H3>Frustlevel 2</H3>
+        <P>Aber naja. Auf der Karte stand ja
+            auch, dass ich mir das Päckchen in meiner Postfiliale abholen kann.
+            Somit bin ich dann um 14 Uhr zu meiner Postfiliale gegangen, um meine
+            Sendung dort abzuholen. Der Mann am Schalter sagte mir aber, nachdem
+            ich etwa eine halbe Stunde in der Schlange gewartet hatte, dass man
+            die nicht zugestellten Sendungen erst am nächsten Tag abholen kann.
+        </P>
+        <P>Natürlich bekam ich es da langsam
+            mit der Angst zu tun, da ich mir die enttäuschten Augen meiner Frau
+            vorstellte. Das sagte ich dem Postangestellten auch, der blickte mich
+            aber ungerührt an und meinet einfach nur wieder, dass ich das
+            Päckchen morgen Nachmittag abholen kann.
+        </P>
+        <P>Genau zu diesem Zeitpunkt stellte
+            sich bei mir die zweite Stufe meines Kunden–Störgefühls ein:
+            „Warum geht der Mann nicht auf mein Problem, dass ich mit dem
+            Service der Deutschen Post (bei der er ja arbeitet)habe, ein? Beim
+            Amazon Lieferdienst ist mir sowas noch nie passiert.“</P>
+        <H3>Frustlevel 3</H3>
+        <P>Nachdem der Schalterangestellte
+            einige meiner Lösungsvorschläge („Sagen Sie mir doch bitte, wo
+            der Postbote gerade ist, dann hole ich mir mein Päckchen dort ab.“)
+            kalt lächelnd ablehnte, fragte ich ihn, wo im mich denn beschweren
+            könnte. Darauf gab er mir eine Karte mit einer Telefonnummer mir
+            dem Kommentar, dass das eh nichts bringt.</P>
+        <P>Genau zu diesem Zeitpunkt stellte
+            sich bei mir die dritte Stufe meines Kunden–Störgefühls ein:
+            „Warum werde ich von ihm behandelt wie ein lästiger Bittsteller?“
+            Bei Amazon ist mir sowas nie passiert und ich kenne auch niemanden,
+            dem sowas schonmal passiert wäre.</P>
+        <H3>Frustlevel 4</H3>
+        <P>Noch auf dem Parkplatz vor der
+            Postfiliale kam es dann zum Showdown meiner Frustrationseskapade. Mit
+            vor Wut zitternden Fingern, wählte ich die mir genannte Nummer für
+            Kundenbeschwerden. Nachdem ich mich etwa 3 Minuten durch etliche
+            „Menüpunkte“ gearbeitet hatte, hörte ich die Stimme einer
+            echten Sachbearbeiterin.
+        </P>
+        <P>Dieser erzählte ich mein Problem:
+            Nämlich das mit meiner Frau, wenn ich mein Päckchen nicht heute
+            noch bekomme. Ihre Antwort war: „Sendungsnummer?“ (Hatte ich die
+            nicht gerade in einem Untermenüpunkt eingeben müssen?) Nachdem ich
+            ihr die Sendungsnummer mitgeteilt hatte, sagte sie mir: „Sie können
+            die Sendung morgen in ihrer Postfiliale abholen.“
+        </P>
+        <P>Genau zu diesem Zeitpunkt stellte
+            sich bei mir die vierte Stufe meines Kunden–Störgefühls ein:
+            „Warum sagt mir die Frau, was eh schon auf meiner gelben Karte
+            steht und hilft mir nicht bei meinem eigentlichen Problem?“ Bei
+            Amazon tun sie sowas immer.</P>
+        <H3>Frustlevel 5</H3>
+        <P>Nachdem mir die Frau sagte, sie
+            könne mir von hier ab nicht mehr weiterhelfen, verlangte ich ihren
+            Vorgesetzten zu sprechen. Das verneinte Sie. Von diesem Zeitpunkt an
+            beschloss ich, es sei nun an der Zeit ein wenig energischer zu
+            werden. Ich sagte ihr also: „Bitte glauben sie mir. Wenn sie mich
+            nicht an ihren Vorgesetzten weiterleiten, wird es nur noch schlimmer.
+            Ich habe sowohl beruflich als auch privat die entsprechenden Mittel.“
+            (Das war natürlich gelogen und nicht sehr schlau von mir als Kunde
+            der Post).
+        </P>
+        <P>Die Leitung wurde für ein paar
+            Augenblicke unterbrochen. Danach meldete sie die Frau wieder mit der
+            Antwort: „Es tut mir leid, ich bin nur eine einfache Mitarbeiterin
+            und mein Vorgesetzter sagte mir, ich soll auflegen. Ich wünsche
+            ihnen noch einen schönen Tag.“ – Klick</P>
+        <P>Genau zu diesem Zeitpunkt stellte
+            sich bei mir die fünfte Stufe meines Kunden–Störgefühls ein:
+            „Wer bitte leitet dieses Call Center? Ein ehemaliger Beamter der
+            Deutschen Bundes Post?“
+        </P>
+        <H3>Frustlevel 4 – wieder eins zurück</H3>
+        <P>Auf meiner Fahrt nach Hause kochte
+            ich vor Wut. Ich fühlte mich ungehört und als Störkörper der
+            Deutschen Post.
+        </P>
+        <P>Plötzlich sah ich aus dem
+            Augenwinkel einen Lieferwagen der DHL. Kurzerhand hielt ich an und
+            rannte zu dem Wagen hin. In diesem Augenblick kam der Fahrer von
+            einer Paketauslieferung zurück. Ich zeigte ihm meine Karte und
+            fragte ihn, ob er zufällig mein Paket hätte und erzählte ihm meine
+            Geschichte. Er hörte mich in Ruhe an, warf einen Blick auf meine
+            gelbe Karte und sagte dann: „Hey deine Adresse kenne ich. Da
+            liefere ich oft etwas ab und ganz ehrlich, ich habe bei Euch noch nie
+            eine Karte eingeworfen. Ich klingele immer bei den Nachbarn und gebe
+            die Pakete dort ab, wenn keiner aufmacht. Aber schau mal, der Code
+            auf deiner Karte endet mit BF. Das bedeutet, dass ein Briefträge das
+            Päckchen ausliefert und nicht wir von der DHL.“</P>
+        <P>Und dann kam der Punkt, bei dem es
+            mir wieder besser ging. Er fuhr nämlich fort: „Weißt du was. Ich
+            schau heute Abend bei deiner Postfiliale nach, ob dein Päckchen dort
+            ist. Wenn ich es finde, bringe ich es dir schnell vorbei. Gib mir
+            doch bitte Deine Nummer.“</P>
+        <P>Was für eine empathische Art mit
+            einem Kunden zu reden. Wirklich großartig und hier noch einmal
+            DANKE. Auch wenn er das Päckchen nicht gefunden hat und ich es erst
+            am Geburtstag meiner Frau abholen konnte: Das tat einfach gut!</P>
+        <H2>Was man daraus lernen kann</H2>
+        <P>Liebe Post. Glauben sie wirklich,
+            dass ich noch einmal in meinem Leben bei einer Bestellung den Versand
+            per Post auswähle? Mich als Kunden wieder zu gewinnen wird für Euch
+            ein hartes Stück Arbeit.</P>
+        <P>Aber stellt Euch einmal vor, das
+            Telefonat mit der Service Hotline wäre nach folgendem einfachen
+            Muster abgelaufen:</P>
+        <P><b>Ich:</b> „Guten Tag, ich habe
+            folgendes Problem…“</P>
+        <P><b>Service Agent</b> [zeigt zunächst
+            Empathie]: „Oh, das muss wirklich frustrierend für Sie sein.“</P>
+        <P><b>Ich:</b> „Ja. Wirklich“</P>
+        <P><b>Service Agent</b> [zeigt, dass es das
+            Problem verstanden hat]: „Ok. Also wenn Sie das Päckchen heute
+            nicht mehr bekommen, wird ihre Frau bestimmt traurig sein.“</P>
+        <P><b>Ich:</b> „Ja. Das können sie mir
+            glauben“</P>
+        <P><b>Service Agent</b> [entschuldigt sich für
+            das entstandene Problem und bietet eine Lösung an]: „Es tut mir
+            leid, dass wir bei ihnen dieses Problem verursacht haben. Bitte
+            lassen sie uns versuchen, es wieder gut zu machen. Ich werde
+            versuchen, den Postboten ausfindig zu machen, um festzustellen, ob
+            sie das Paket vielleicht bei ihm abholen können. Wäre das eine
+            Lösung für sie?“</P>
+        <P><b>Ich:</b> Ja sicherlich.</P>
+        <P><b>Service Agent</b> [Räumt ein, dass das
+            nicht unbedingt klappen muss]: „Falls es nicht klappen sollte,
+            werden wir uns für den entstandenen Schaden bei ihnen revanchieren.
+            Mag ihre Frau Blumen?“</P>
+        <P>Liebe Post. Glauben sie, dass ich
+            nach so einem Telefonat jemals wieder einen anderen Lieferdienst
+            beauftragen würde?</P>
+        <H2>Was hat das mit Digitalisierung zu tun</H2>
+        <P>Als Experte für digitale
+            Transformation definiere ich für meine Kunden, die Digitalisierung
+            gerne folgendermaßen:
+        </P>
+        <P ALIGN=CENTER>Digitalisierung
+            bedeutet den maximale Kundenfokus zu haben.</P>
+        <P>Es ist dabei nachgelagert, ob ich
+            das mit unglaublich teurer Software mache oder mit Papier und
+            Bleistift. Gelingt es mir den Kunden da abzuholen, wo er ist, kann
+            ihn mein Mitbewerben nicht mehr abholen, weil ich ihn ja schon habe.
+        </P>
+        <P>Deshalb ist ein Kunde, der sich mit
+            einem Problem an mich wendet, eine unglaubliche Chance, ihn mit
+            einfachen Mitteln an mich zu binden und seine Bekannten gleich
+            mitzuziehen. Stellen sie sicher, dass sie ihren Kunden komplett
+            verstehen. Lernen sie ihren Kunden kennen. Messen sie seine
+            Zufriedenheit und verbessern sie diese eine KPI permanent. Alle
+            anderen Unternehmenskennzahlen leiten sich in einem digitalisierten
+            Unternehmen davon ab.</P>
+        <P>Liebe Post. Wenn Sie von diesem Blog
+            betroffen sein sollten, kann ich das verstehen. Das ist definitiv
+            keine schöne Geschichte für sie und mich. Ich kann ihnen aber dabei
+            helfen es besser zu machen, wenn sie wollen. Lassen sie uns eine
+            Tasse Kaffee trinken.</P>
+        <P>Johannes Höhne</P>
+        <P>MT AG</P>
+
+    </div>
+
+
+
+    <!-- Third Parallax Image with Blogs Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">HOW TO CONTACT ME</h3>
+        <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-medium w3-margin-bottom">
+                    <a href="http://www.magic-inside.de" target="_blank" style="text-decoration: none;"><i
+                            class="fa fa-home fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+                        www.magic-inside.de<br></a>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> +49 0172 545 123
+                    2<br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+                    Hoehne@magic-inside.de<br>
+                    <a href="https://www.linkedin.com/in/h%C3%B6hne-johannes/" target="_blank"
+                        style="text-decoration: none;"><i
+                            class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+                        www.linkedin.com/in/höhne-johannes<br></a>
+                    <a href="https://www.xing.com/profile/Johannes_Hoehne2/" target="_blank"
+                        style="text-decoration: none;"><i
+                            class="fa fa-xing fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+                        www.xing.com/profile/Johannes_Hoehne2<br></a>
+                    <a href="https://github.com/JJDoneAway" target="_blank" style="text-decoration: none;"><i
+                            class="fa fa-git fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+                        github.com/JJDoneAway<br></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Images provided by <a href="https://rawpixel.com" title="rawpixel.com" target="_blank"
+                class="w3-hover-text-green">rawpixel.com</a></p>
+    </footer>
+
+    <script>
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-cognac";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-cognac", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>
