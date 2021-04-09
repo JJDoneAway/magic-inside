@@ -307,6 +307,8 @@
         <p>Lassen sie uns eine
             Tasse Kaffee trinken.</P>
         <P>Johannes Höhne</P>
+
+        <div id="disqus_thread"></div>
     </div>
 
 
@@ -379,6 +381,18 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
+
+        var disqus_config = function () {
+            this.page.url = "http://www.magic-inside.de/blogs/post_reimt_sich_auf_kotzen.html";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "post_reimt_sich_auf_kotzen"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://post-reimt-sich-auf-kotzen.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
     </script>
 </body>
 
