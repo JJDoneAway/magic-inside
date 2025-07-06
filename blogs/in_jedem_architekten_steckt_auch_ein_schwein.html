@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <title>magic-inside</title>
+  <meta
+    name="description"
+    content="In jedem Architekten steckt auch ein Schwein"
+  />
+  <meta name="author" content="Johannes Hoehne" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../content/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
+    }
+
+    h1,
+    h2 {
+      text-indent: -0.5em;
+    }
+
+    p {
+      font-family: serif;
+      font-size: larger;
+    }
+
+    body,
+    html {
+      height: 100%;
+      color: black;
+      line-height: 1.8;
+    }
+
+    .w3-cognac {
+      background-color: #d4ccc4 !important;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url("../content/images/in_jedem_architekten_steckt_auch_ein_schwein.jpg");
+      min-height: 100%;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("../content/images/contact.jpg");
+      min-height: 400px;
+    }
+
+    .w3-wide {
+      letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
+
+    .w3-blog {
+      color: #fff !important;
+      background-color: #777 !important;
+    }
+
+    /* no blog card should be displayed at first */
+    .blog-slide {
+      display: none;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
+
+  <body class="w3-cognac">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" style="color: black" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="http://www.magic-inside.de" class="w3-bar-item w3-button">HOME</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-envelope"></i> CONTACT</a
+        >
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-cognac w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >CONTACT</a
+        >
+      </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home"></div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h1>In jedem Enterprise Architekten steckt auch ein Schwein</h1>
+      <p><strong>Oder wie man Beteiligte zu Betroffenen macht</strong></p>
+
+      <h2>Enterprise Architecture – Das ist doch sowas von 90’er</h2>
+      <p>
+        Auf der einen Seite haben Enterprise Architekten im Augenblick keinen
+        guten Ruf. Da gibt es Kosenamen wie: „Architekten im Elfenbeinturm“,
+        „UML Junkies“, „Besserwisser“ oder „Nacheilende Dokumentatoren“. Dann
+        gibt es noch den Traum aller Enterprise Architekten, einmal alle
+        Systeme, deren Use Cases, Interfaces und implementierten Prozesse
+        richtig abzubilden. Am Besten noch in einer lebenden Dokumentation mit
+        einem Tool, das unglaublich teuer ist und zu dem nur eingeweihte einen
+        Zugang haben.
+      </p>
+
+      <h2>Product Driven Development – Der heiße Scheiß</h2>
+      <p>
+        Auf der anderen Seite gibt es die Digitale Transformation. Hier tummeln
+        sich ganz andere Schlagwörter oder eben Buzzwords: Microservices, You
+        build it You run it, Scrum, agile Fehlerkultur, Brownbag Sessions,
+        Fuckup Nights, Error Budgets, … . Dahinter steht der feste Glaube der
+        Verantwortlichen, wenn wir nur mal durch die Digitale Transformation
+        durch sind, wird alles, was wir anfassen zum Erfolg. Wir sind dann „Easy
+        as Apple“ und alles geht dann auf Einmal ganz schnell. Heute haben wir
+        eine Idee und morgen probieren wir sie schon in Produktion an unseren
+        Kunden aus.
+      </p>
+
+      <h2>Ein Schwein und ein Huhn – Das Geheimnis dahinter</h2>
+      <p>
+        Es ist richtig, dass die klassische Enterprise Architektur in
+        digitalisierten Unternehmen keinen Platz mehr haben darf, da sie die
+        Produktteams in ihrer Arbeit negativ beeinflussen. Der Grund hierfür ist
+        das Verhältnis zwischen Betroffenen und Beteiligten. Das wird sehr
+        anschaulich mit dem Huhn / Schwein Pattern illustriert: Ein Huhn und ein
+        Schwein eröffnen ein Frühstücksrestaurant, bei dem ausschließlich Rührei
+        mit Speck serviert werden soll. Dadurch nimmt das Schwein die Rolle des
+        Betroffenen ein und das Huhn ist lediglich beteiligt. Man kann sich
+        vorstellen, dass das Schwein die Entscheidungen über den „Lieferprozess“
+        der Lebensmittel haben sollte und das Huhn damit eher die Rolle des
+        Zuhörers einnimmt. Bei agilen Entscheidungsprozessen nennt man das den
+        „silent Chicken Mode“. Klassische Unternehmen haben aufgrund ihrer
+        ganzheitlichen, effizienzoptimierten Prozesse viele Beteiligte und
+        wenige Betroffene bei jeder Entscheidungsfindung. Dadurch kommt es, dass
+        wenige Betroffene die über viele Meetings hinweg gefällten
+        Entscheidungen „ausbaden“ müssen. Zum einen lähmt das die
+        Entwicklungsgeschwindigkeit der jeweiligen Komponenten. Zum anderen
+        fehlt bei den Betroffenen dadurch oft das nötige emotionale
+        „Commitment“. Kennen Sie aus Ihrem Umfeld Sätze, die mit „Man müsste das
+        eigentlich, …“, „Ich verstehe gar nicht, warum …“ oder „Es ist doch
+        klar, dass das nicht funktioniert …“ beginnen? Hier sprechen Betroffene,
+        die von Beteiligten überstimmt wurden. Die digitale Transformation
+        justiert dieses Verhältnis neu: Viele Betroffene und nur sehr wenige
+        Beteiligte. Also stark gekapselte Produktteams, die mit maximaler
+        Unabhängigkeit ihre Produkte weiterentwickeln. Was für eine Rolle spielt
+        aber in diesem Ansatz die Enterprise Architektur? Sie ist ja ein
+        klassisches Huhn. Kann sie also weg? Die Antwort versteckt sich hinter
+        zwei neuen Fragen:
+      </p>
+      <ul>
+        <li>Wie macht man aus einem Huhn ein Schwein?</li>
+        <li>Was für einen Mehrwert stiftet die Enterprise Architektur?</li>
+      </ul>
+
+      <h2>Digitale Produkte – Wie ist ein Schwein gebaut?</h2>
+      <p>
+        Erfolgreiche digitale Produkte leben nach einem einzigen eisernen
+        Grundsatz: <strong>Hohe Kohäsion und lose Kopplung.</strong>
+      </p>
+      Die Kohäsion zielt dabei auf das innere eines Produktes ab. Das
+      Aufgabengebiet, das von dem Produkt exklusiv behandelt werden soll, muss
+      möglichst eng und hermetisch sein. Es macht zum Beispiel wenig Sinn, wenn
+      sich ein Produkt um den Bestellprozess und gleichzeitig über die
+      Bestandsführung im Lager Gedanken macht, weil beide Themen nicht eng genug
+      zusammenhängen. Die lose Kopplung fordert, auf welche Art und Weise die
+      Produkte (und deren Teams) miteinander kommunizieren: Über Services, die
+      unabhängig genutzt werden können. Dabei müssen die Services so beschrieben
+      und zur Verfügung gestellt werden, dass man sie ohne weitere zusätzliche
+      Information nutzen kann. Im Beispiel des Produktes für Bestellungen wäre
+      das: „Bitte löse für diesen Kunden mit der ID 123 die Bestellung der Waren
+      mit folgenden ID's aus: 4711, 4712 und 4713“. Das Bestell – Produkt holt
+      sich dann mit der Kunden ID vom Kunden Produkt alle relevanten
+      Informationen und mit den Produkt IDs vom Produkt Service alle nötigen
+      Produktinformationen. Danach erzeugt es einen Bestellauftrag für das Lager
+      und so weiter. Mit dieser Definition (Hohe Kohäsion und lose Kopplung),
+      könnte man die Enterprise Architektur eines Unternehmens ebenfalls als
+      Digitales Produkt anbieten. Dadurch würden alle vormals nur beteiligten
+      Architekten zu betroffenen. Somit bleibt noch zu klären, welchen Mehrwert
+      die Enterprise Architektur in einem digitalisierten Unternehmen stiftet.
+
+      <h2>Enterprise Architektur – Ein sinnvolles digitales Produkt!</h2>
+      <p>
+        Die Kohäsion und damit der Sinn des Themas „Enterprise Architektur“
+        liegt auf der Hand: „Sorge dafür, dass alle technische
+        unternehmenskritische Aspekte umgesetzt werden.“ Das sind im
+        Wesentlichen zwei:
+      </p>
+      <ul>
+        <li>
+          Homogenität: Im Deployment und Delivery (CI/CD), im Betrieb (z.B.:
+          Cloud first), beim Logging und Monitoring, bei der Security (z.B.:
+          zentrale Authentifizierung und Autorisierung, https only, …), bei den
+          Verwendeten Produkten („Wie viele CMS Produkte haben wir eigentlich
+          derzeit im Betrieb?“). Dadurch erzeugt man eine gleichförmige Art und
+          Weise, wie entwickelt wird und verhindert local Heroes und schwer zu
+          skalierende Ressourcen. Zudem fördert man einen sicheren und
+          verfügbaren Betrieb der Gesamtlösung.
+        </li>
+        <li>
+          Lose Kopplung: Alle Produkte dürfen nur noch über einen gehärteten API
+          Layer miteinander kommunizieren. Dort werden alle Services konform
+          angemeldet und zur Verfügung gestellt. Dadurch erzeugt man die
+          Austauschbarkeit einzelner Lösungen und minimiert unnötige
+          Abstimmungsmeetings zwischen den Produkten (wenige Hühner).
+        </li>
+      </ul>
+      <p>
+        Die lose Kopplung des Produktes „Enterprise Architektur“ kann man durch
+        drei angebotene Services erreichen.
+      </p>
+      <ul>
+        <li>
+          „Was - Service“: Die Enterprise Architektur (EA) übernimmt Make – Buy
+          – Use Assessments, führt eine Entscheidung herbei und kümmert sich um
+          die Umsetzung des beschlossenen Ansatzes. Wenn also ein Software
+          Produkt gekauft oder genutzt (SAAS) werden soll, überprüft die EA die
+          Gebrauchstauglichkeit im Unternehmenskontext, ob es dafür nicht schon
+          eine Lösung im Unternehmen gibt oder ob man die Software nicht selber
+          bauen sollte.
+        </li>
+        <li>
+          „Wie – Service“: Die Enterprise Architektur gibt Auskunft, wie andere
+          Produkte ein spezifisches Problem lösen. „Wie machen wir CI/CD?“, „Wie
+          machen wir Pull over Push?“. Wenn es für die Anfrage im Moment noch
+          keine Lösung gibt, organisiert die EA ein Gilden Treffen und moderiert
+          die Community zu einem Guiding Principle, an dass sich dann alle
+          Produkte halten, um in homogener Art und Weise entwickeln zu können.
+          Die gefundenen Guiding Principles werden ebenfalls von EA in alle
+          Produkt Teams getragen und stellt sicher, dass die Prinzipien
+          verstanden und akzeptiert wurden.
+        </li>
+        <li>
+          „KPI – Service“: Die EA sorgen dafür, dass vom API Layer und der
+          Infrastruktur permanent Metriken abgegriffen werden können, von denen
+          die Organisation ableiten kann, ob die Prinzipien, die sich alle
+          gegeben haben auch entsprechend eingehalten werden.
+        </li>
+      </ul>
+      <p>
+        Das sind natürlich keine REST Services, sondern ein Ticketsystem, eine
+        Telefonnummer, eine Mailadresse und eine aufgeräumte adressatengerechte
+        Confluence Seite, über die man die Services anfragen kann.
+      </p>
+      <p>
+        Durch diesen Ansatz erreicht man, dass sich die Enterprise Architektur
+        komplett aus dem Produktkontext heraushält. Alles, was im Produkt
+        geschieht, bleibt Sache des Produktteams und kann von diesem
+        eigenständig entschieden und verantwortet werden. Auf der anderen Seite
+        ist der Raum zwischen den einzelnen Produkten und der Raum zwischen den
+        Produkten und der Infrastruktur das Hoheitsgebiet der Enterprise
+        Architektur. Hier ist sie betroffen und entscheidet somit auch.
+      </p>
+      <h2>Eine Erfahrung aus der Praxis</h2>
+      <p>
+        In den letzten Jahren hatte ich die Möglichkeit dieses Konzept bei einer
+        sehr großen europaweiten Einzelhandelskette in die gelebte Wirklichkeit
+        mit umzusetzen. Stück für Stück konnte ich bei diesem Change Prozess
+        feststellen, wie die Enterprise Architekten immer stärker als Service
+        Provider wahrgenommen werden, die sich ganzheitlich um Probleme kümmern
+        und den einzelnen Produktteams lose gekoppelt Arbeit abnehmen. So
+        entsteht unternehmensweit eine homogene und sichere Softwarelandschaft
+        in der sich die einzelnen Produktteams im hohen Maße unabhängig und
+        eigenständig um ihre Produkte kümmern. Eine vormals streng hierarchische
+        Organisation, die ihre gesamte Historie Top – Down und hochgradig
+        prozessoptimiert agiert hat, ändert sich in ein digitalisiertes
+        Unternehmen, das seine Entscheidungen Botton Up in Community Prozessen
+        trifft. Dadurch entsteht ein hohes Maß an effektiver Schlagkraft, die
+        nötig sein wird, um im digitalisierten Markt überleben zu können.
+      </p>
+    </div>
+
+    <!-- Third Parallax Image with Blogs Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+      </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <h3 class="w3-center">HOW TO CONTACT ME</h3>
+      <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+      <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m8 w3-panel">
+          <div class="w3-medium w3-margin-bottom">
+            <a
+              href="http://www.magic-inside.de"
+              target="_blank"
+              style="text-decoration: none"
+              ><i
+                class="fa fa-home fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+              ></i>
+              www.magic-inside.de<br
+            /></a>
+            <i
+              class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            +49 0172 545 123 2<br />
+            <i
+              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            Hoehne@magic-inside.de<br />
+            <a
+              href="https://www.linkedin.com/in/h%C3%B6hne-johannes/"
+              target="_blank"
+              style="text-decoration: none"
+              ><i
+                class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+              ></i>
+              www.linkedin.com/in/höhne-johannes<br
+            /></a>
+            <a
+              href="https://www.xing.com/profile/Johannes_Hoehne2/"
+              target="_blank"
+              style="text-decoration: none"
+              ><i
+                class="fa fa-xing fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+              ></i>
+              www.xing.com/profile/Johannes_Hoehne2<br
+            /></a>
+            <a
+              href="https://github.com/JJDoneAway"
+              target="_blank"
+              style="text-decoration: none"
+              ><i
+                class="fa fa-git fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+              ></i>
+              github.com/JJDoneAway<br
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off"
+    >
+      <a href="#home" class="w3-button w3-light-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a
+      >
+      <p>
+        Images provided by
+        <a
+          href="https://rawpixel.com"
+          title="rawpixel.com"
+          target="_blank"
+          class="w3-hover-text-green"
+          >rawpixel.com</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function () {
+        myFunction();
+      };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className =
+            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-cognac";
+        } else {
+          navbar.className = navbar.className.replace(
+            " w3-card w3-animate-top w3-cognac",
+            ""
+          );
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      (function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://post-reimt-sich-auf-kotzen.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  </body>
+</html>
